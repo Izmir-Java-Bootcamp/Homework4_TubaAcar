@@ -5,13 +5,12 @@ public class Main {
     public static void main(String[] args) {
 	//CRUD(Create, read, update and delete)
         //Category Controller
-        /categories/{id}/parent -> get.category;
-                /categories/{id}/products -> get.products;
-                /categories/{id}/subcategories -> get.subcategories;
-	    import java.util.List;
-import java.util;
+        // /categories/{id}/parent -> get.category;
+         //       /categories/{id}/products -> get.products;
+        //        /categories/{id}/subcategories -> get.subcategories
+import java.util.List;
 
-@RestController
+	    @RestController
 public class CategoryController {
    
     @RequestMapping("/categories")
