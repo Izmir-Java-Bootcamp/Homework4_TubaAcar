@@ -12,26 +12,21 @@ public class Main {
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/")
 public class CategoryController.java {
-    @Autowired
-    ItemRepository itemRepo;
-
+   
     @RequestMapping("/categories")
   
     public ResponseEntity<List<Item>> getAllItems(){
-        
     }
 
     @GetMapping("/categories/{id}/parent")
     @ResponseBody
     public ResponseEntity<Item> getItem(@PathVariable Long itemId){
-        Optional<Item> item = itemRepo.findById(itemId);
-        return new ResponseEntity<Item>);
+       return new ResponseEntity<Item>);
     }
 
    @GetMapping("/categories/{id}/subCategories")
-    @ResponseBody
+    
     public ResponseEntity<Item> getItem( itemId){
         Optional<Item> item = itemRepo.findById(itemId);
         return new ResponseEntity<Item>;
@@ -39,12 +34,10 @@ public class CategoryController.java {
    @GetMapping("/categories/{id}/products")
     @ResponseBody
     public ResponseEntity<Item> getItem( itemId){
-        Optional<Item> item = itemRepo.findById(itemId);
+       
         return new ResponseEntity<Item>);
     }
 	
-	
-
         //Product Controller
         //CRUD(Create, read, update and delete)
         @Controller
@@ -66,11 +59,7 @@ public class CategoryController.java {
             public void Product {
                 service.deleteProduct(id);
             }
-
-
         }
-
-
 
         //Basket Controller
 
@@ -81,8 +70,7 @@ public class CategoryController.java {
             private final Basket basket;
 
             @PostMapping
-            public BasketDto createBasket(@RequestBody CreateUpdateBasketRequest request){
-
+            public @basketcontroller{
                 return basket.createBasket(request);
             }
             @deleteMapping
@@ -97,24 +85,19 @@ public class CategoryController.java {
             public void makeNoActiveBasket(int id){
                 basket.makeNotActiveBasket(id);
             }
-
-
-        //Checkout Controller
+           //Checkout Controller
 
             @RequiredArgsConstructor
             @RestController
             @RequestMapping("checkouts")
             public class Checkout {
                 private final Checkout checkout;
-
                 @GetMapping("{userId}")
                 public BasketItems(int userId) {
                     return userId;
                 }
-
                 @PostMapping
                 public createOrder(int userId) {
-
                     return userId;
                 }
             }
