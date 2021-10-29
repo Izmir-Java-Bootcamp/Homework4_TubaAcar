@@ -8,6 +8,42 @@ public class Main {
         /categories/{id}/parent -> get.category;
                 /categories/{id}/products -> get.products;
                 /categories/{id}/subcategories -> get.subcategories;
+	    import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/")
+public class CategoryController.java {
+    @Autowired
+    ItemRepository itemRepo;
+
+    @RequestMapping("/categories")
+  
+    public ResponseEntity<List<Item>> getAllItems(){
+        
+    }
+
+    @GetMapping("/categories/{id}/parent")
+    @ResponseBody
+    public ResponseEntity<Item> getItem(@PathVariable Long itemId){
+        Optional<Item> item = itemRepo.findById(itemId);
+        return new ResponseEntity<Item>);
+    }
+
+   @GetMapping("/categories/{id}/subCategories")
+    @ResponseBody
+    public ResponseEntity<Item> getItem( itemId){
+        Optional<Item> item = itemRepo.findById(itemId);
+        return new ResponseEntity<Item>;
+    }
+   @GetMapping("/categories/{id}/products")
+    @ResponseBody
+    public ResponseEntity<Item> getItem( itemId){
+        Optional<Item> item = itemRepo.findById(itemId);
+        return new ResponseEntity<Item>);
+    }
+	
+	
 
         //Product Controller
         //CRUD(Create, read, update and delete)
@@ -82,15 +118,6 @@ public class Main {
                     return userId;
                 }
             }
-
-
-
-
-
-
-
-
-
 
     }
 }
