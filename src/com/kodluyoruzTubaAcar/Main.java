@@ -9,31 +9,31 @@ public class Main {
                 /categories/{id}/products -> get.products;
                 /categories/{id}/subcategories -> get.subcategories;
 	    import java.util.List;
-import java.util.Optional;
+import java.util;
 
 @RestController
-public class CategoryController.java {
+public class CategoryController {
    
     @RequestMapping("/categories")
   
-    public ResponseEntity<List<Item>> getAllItems(){
+    public CategoryController(){
     }
 
     @GetMapping("/categories/{id}/parent")
     @ResponseBody
-    public ResponseEntity<Item> getItem(@PathVariable Long itemId){
-       return new ResponseEntity<Item>);
+    public getItem(itemId){
+       return new conroller);
     }
 
    @GetMapping("/categories/{id}/subCategories")
     
-    public ResponseEntity<Item> getItem( itemId){
-        Optional<Item> item = itemRepo.findById(itemId);
-        return new ResponseEntity<Item>;
+    public getItem( itemId){
+     
+        return new ıtem;
     }
    @GetMapping("/categories/{id}/products")
     @ResponseBody
-    public ResponseEntity<Item> getItem( itemId){
+    public getItem( itemId){
        
         return new ResponseEntity<Item>);
     }
